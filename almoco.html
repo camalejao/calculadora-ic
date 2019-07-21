@@ -14,7 +14,6 @@
     <!-- Import dos ícones do Font Awesome -->
     <script src="https://kit.fontawesome.com/b9710ea44b.js"></script>
     <link rel="stylesheet" href="css/site.css">
-
     <title>Calculadora do IC</title>
 </head>
 
@@ -39,7 +38,7 @@
                     <a class="nav-link" href="faltas.html">Faltas</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="notas.shtml">Nota Final</a>
+                    <a class="nav-link" href="notas.html">Nota Final</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="almoco.html">Almoço</a>
@@ -57,18 +56,21 @@
     <!-- Container do texto principal -->
     <div class="container mx-auto text-light" style="max-width: 42em;">
         <main class="text-center text-justify">
-            <br>
-            <h1 class="font-weight-bold mb-3 pb-3">CALCULADORA DO IC</h1>
-            <p class="lead text-justify">Bem-vindo à Calculadora do IC/UFAL. Aqui você pode realizar diversas contas que
-                te auxiliarão no dia-a-dia como estudante da universidade, tais quais: saber quantas faltas você pode
-                ter sem ser reprovado na disciplina, qual nota será necessária para ser aprovado na avaliação final,
-                além de descobrir quanto será gasto com café, almoço ou passagens de ônibus.
-            </p>
-            <a class="btn btn-light mt-2" href="faltas.html" role="button">Faltas <i class="fa fa-calendar-times-o"></i></a>
-            <a class="btn btn-light mt-2" href="notas.html" role="button">Nota Final <i class="fa fa-graduation-cap"></i></a>
-            <a class="btn btn-light mt-2" href="almoco.html" role="button">Almoço <i class="fa fa-cutlery"></i></a>
-            <a class="btn btn-light mt-2" href="cafe.html" role="button">Café <i class="fa fa-coffee"></i></a>
-            <a class="btn btn-light mt-2" href="passagens.html" role="button">Passagens <i class="fa fa-bus"></i></a>
+            <br> <br>
+            <h1 class="font-weight-bold mb-3 pb-3">ALMOÇO</h1>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">R.U</span>
+              </div>
+            <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+            <div class="input-group mb-3">
+              <div class="input-group-prepend">
+                <span class="input-group-text" id="basic-addon1">Bira</span>
+              </div>
+            <input type="text" class="form-control" aria-describedby="basic-addon1">
+            </div>
+            <button type="button" class="btn btn-light mt-2 center">Calcular</button>
         </main>
     </div>
 

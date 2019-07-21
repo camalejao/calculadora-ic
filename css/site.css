@@ -1,0 +1,31 @@
+.rodape-pagina {
+    padding: 0.5em;
+    clear: both;
+    position: fixed;
+    bottom: -15px;
+    left: 15px;
+    width: 100%;
+    background-repeat: no-repeat;
+    font-size: 10px;
+}
+
+.icones-redes-sociais li {
+  font-size: 220%;
+  display: inline-block;
+}
+
+.icones-redes-sociais a {
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    display: inline-block;
+    text-indent: -99999px;
+}
+
+.github {
+    background-image: url(../img/github.png);
+}
+
+.linkedin {
+    background-image: url(../img/linkedin.png);
+}
