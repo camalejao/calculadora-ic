@@ -62,8 +62,8 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Meio de Transporte</label>
                 </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Selecione...</option>
+                <select class="custom-select meio-transporte" id="inputGroupSelect01">
+                    <option value="0" disabled selected>Selecione...</option>
                     <option value="3.75">Ônibus - Maceió</option>
                     <option value="4.60">Ônibus - Metropolitano/Rio Largo</option>
                     <option value="5">Van</option>
@@ -73,7 +73,7 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Qtd. de Viagens</span>
                 </div>
-                <input type="number" min="1" max="180" class="form-control" aria-describedby="basic-addon1">
+                <input type="number" min="1" max="180" class="form-control qtd-viagens" aria-describedby="basic-addon1">
             </div>
             <div class="form-check mb-3">
                 <input class="form-check-input" type="checkbox" value="1" id="defaultCheck1">
@@ -81,7 +81,7 @@
                   Marque se possuir desconto de estudante (50% do valor da passagem)
                 </label>
             </div>
-            <button type="button" class="btn btn-light mt-2 center">Calcular</button>
+            <button type="button" class="btn btn-light mt-2 center calcular">Calcular</button>
         </main>
         <br>
         <div class="alert alert-success invisivel" role="alert">
@@ -115,6 +115,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/passagens.js"></script>
 </body>
 
 </html>

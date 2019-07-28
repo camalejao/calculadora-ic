@@ -6,18 +6,33 @@ botaoCalcular.addEventListener("click", function(event){
   var reav = document.querySelector(".reav");
   var alert = document.querySelector(".alert");
   var media = calculaNota(ab1.value, ab2.value, reav.value);
-  if(media > 7){
+  if(ab1.value < 0 || ab1.value == ""){
     alert.classList.remove("invisivel");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    document.getElementById("paragrafo-alert").innerHTML = "Informe um valor válido para a AB1.";
+  }
+  else if(ab2.value < 0 || ab2.value == ""){
+    alert.classList.remove("invisivel");
+    alert.classList.remove("alert-success");
+    alert.classList.add("alert-danger");
+    document.getElementById("paragrafo-alert").innerHTML = "Informe um valor válido para a AB2.";
+  }
+  else if(media > 7){
+    alert.classList.remove("invisivel");
+    alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     document.getElementById("paragrafo-alert").innerHTML = "Você não precisa fazer a prova final!";
   }
   else if (media < 5.5){
     alert.classList.remove("invisivel");
+    alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     document.getElementById("paragrafo-alert").innerHTML = "Você não poderá fazer a prova final, pois a média é menor que 5.5!"
   }
   else{
     alert.classList.remove("invisivel");
+    alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
     var notaFinal = ((55 - parseFloat(4 * parseFloat(media)))/6.0).toFixed(1);
     document.getElementById("paragrafo-alert").innerHTML = "Você precisará tirar, no mínimo, "+notaFinal+" na prova final!"

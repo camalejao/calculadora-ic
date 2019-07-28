@@ -62,9 +62,9 @@
                 <div class="input-group-prepend">
                     <label class="input-group-text" for="inputGroupSelect01">Lanchonete</label>
                 </div>
-                <select class="custom-select" id="inputGroupSelect01">
-                    <option selected>Selecione...</option>
-                    <option value="1.50">CEDU</option>
+                <select class="custom-select local" required id="inputGroupSelect01">
+                    <option value="0" disabled selected>Selecione...</option>
+                    <option value="1">CEDU</option>
                     <option value="2">BIRA</option>
                 </select>
             </div>
@@ -72,9 +72,9 @@
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">Quantidade</span>
                 </div>
-                <input type="number" min="1" max="31" class="form-control" aria-describedby="basic-addon1">
+                <input type="number" min="1" max="31" class="form-control quantidade" aria-describedby="basic-addon1">
             </div>
-            <button type="button" class="btn btn-light mt-2 center">Calcular</button>
+            <button type="button" class="btn btn-light mt-2 center calcular">Calcular</button>
         </main>
         <br>
         <div class="alert alert-success invisivel" role="alert">
@@ -108,7 +108,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
-    <script src="js/chamaRedesSociais.js"></script>
+    <script type="text/javascript" src="js/cafe.js"></script>
 </body>
 
 </html>
