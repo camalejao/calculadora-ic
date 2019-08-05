@@ -29,7 +29,7 @@ botaoCalcular.addEventListener("click", function(event){
 
 function calculaPreco(meioTransporte, qtdViagens)
 {
-  if(document.getElementById("defaultCheck1").checked){
+  if(document.getElementById("checkbox-desconto").checked){
     return parseFloat((meioTransporte.value * qtdViagens.value)/2.0).toFixed(2);
   }
   else{

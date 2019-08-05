@@ -60,29 +60,32 @@
             <h1 class="font-weight-bold mb-3 pb-3">NOTAS</h1>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">AB1</span>
+                    <span class="input-group-text">AB1</span>
                 </div>
-                <input type="number" step="0.01" max="10" min="0" class="form-control ab1" aria-describedby="basic-addon1">
+                <input type="number" step="0.01" max="10" min="0" class="form-control ab1">
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <span class="input-group-text" id="basic-addon1">AB2</span>
                 </div>
-                <input type="number" step="0.01" max="10" min="0" class="form-control ab2" aria-describedby="basic-addon1">
+                <input type="number" step="0.01" max="10" min="0" class="form-control ab2">
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">RA</span>
+                    <span class="input-group-text">RA
+                        <i class="text-dark fas fa-question-circle ml-2" data-toggle="tooltip" data-placement="top"
+                            title="Reavaliação."></i>
+                    </span>
                 </div>
-                <input type="number" step="0.01" max="10" min="0" class="form-control reav" aria-describedby="basic-addon1">
+                <input type="number" step="0.01" max="10" min="0" class="form-control reav">
             </div>
             <button type="button" class="btn btn-light mt-2 center calcular">Calcular</button>
         </main>
         <br>
         <div class="alert alert-success invisivel" role="alert">
-          <h4 class="alert-heading text-center">Resultado</h4>
-          <hr>
-          <p class="text-center" id="paragrafo-alert"></p>
+            <h4 class="alert-heading text-center">Resultado</h4>
+            <hr>
+            <p class="text-center" id="paragrafo-alert"></p>
         </div>
     </div>
 
@@ -111,6 +114,11 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
     <script type="text/javascript" src="js/notas.js"></script>
+    <script>
+            $(function () {
+                $('[data-toggle="tooltip"]').tooltip()
+            });
+    </script>
 </body>
 
 </html>

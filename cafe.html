@@ -60,19 +60,20 @@
             <h1 class="font-weight-bold mb-3 pb-3">CAFÉ</h1>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <label class="input-group-text" for="inputGroupSelect01">Lanchonete</label>
+                    <label class="input-group-text" for="select-lanchonete">Lanchonete</label>
                 </div>
-                <select class="custom-select local" required id="inputGroupSelect01">
+                <select class="custom-select local" required id="select-lanchonete">
                     <option value="0" disabled selected>Selecione...</option>
-                    <option value="1">CEDU</option>
+                    <option value="0.5">CEDU - 150ml</option>
+                    <option value="1">CEDU - 300ml</option>
                     <option value="2">BIRA</option>
                 </select>
             </div>
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
-                    <span class="input-group-text" id="basic-addon1">Quantidade</span>
+                    <span class="input-group-text">Quantidade</span>
                 </div>
-                <input type="number" min="1" max="31" class="form-control quantidade" aria-describedby="basic-addon1">
+                <input type="number" min="1" max="31" class="form-control quantidade">
             </div>
             <button type="button" class="btn btn-light mt-2 center calcular">Calcular</button>
         </main>
