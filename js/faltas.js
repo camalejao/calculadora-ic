@@ -23,8 +23,8 @@ botaoCalcular.addEventListener("click", function (event) {
 });
 
 function calculaNumeroFaltas(cargaHorariaTotal, cargaHorariaDiaria) {
-    var cht = parseInt(cargaHorariaTotal.value * 60);
-    var chd = parseInt(cargaHorariaDiaria.value * 50);
+    var cht = parseInt(cargaHorariaTotal.value);
+    var chd = parseInt(cargaHorariaDiaria.value);
     var numAulas = parseInt(cht / chd);
     return parseInt(numAulas * 0.3);
 }
