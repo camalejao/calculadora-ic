@@ -24,17 +24,17 @@ botaoCalcular.addEventListener("click", function(event){
     alert.classList.add("alert-success");
     document.getElementById("paragrafo-alert").innerHTML = "Você não precisa fazer a prova final!";
   }
-  else if (media < 5.5){
+  else if (media < 5.0){
     alert.classList.remove("invisivel");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
-    document.getElementById("paragrafo-alert").innerHTML = "Você não poderá fazer a prova final, pois a média é menor que 5.5!"
+    document.getElementById("paragrafo-alert").innerHTML = "Você não poderá fazer a prova final, pois a média é menor que 5.00!"
   }
   else{
     alert.classList.remove("invisivel");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
-    var notaFinal = ((55 - parseFloat(4 * parseFloat(media)))/6.0).toFixed(1);
+    var notaFinal = ((55 - parseFloat(6 * parseFloat(media)))/4.0).toFixed(2);
     document.getElementById("paragrafo-alert").innerHTML = "Você precisará tirar, no mínimo, "+notaFinal+" na prova final!"
   }
 });
