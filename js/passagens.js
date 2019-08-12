@@ -1,51 +1,78 @@
+/* atribui o botão da página à variável "botaoCalcular" */
 var botaoCalcular = document.querySelector(".calcular");
 
-botaoCalcular.addEventListener("click", function(event){
+/* cria um event listener para executar a função sempre
+que o botão for clicado */
+botaoCalcular.addEventListener("click", function (event) {
+
+  // pegando valores da página e atribuindo a variáveis
   var meioTransporte = document.querySelector(".meio-transporte");
   var qtdViagens = document.querySelector(".qtd-viagens");
-  var preco = calculaPreco(meioTransporte, qtdViagens);
-  var nomeTransporte = verificaTransporte(meioTransporte.value);
   var alert = document.querySelector(".alert");
-  if(meioTransporte.value == 0){
+
+  // iniciando variavel preço com o retorno da função calculaPreco
+  var preco = calculaPreco(meioTransporte, qtdViagens);
+
+  // iniciando variavel nome com o retorno da função verificaTransporte
+  var nomeTransporte = verificaTransporte(meioTransporte.value);
+
+  // verificando erros de entrada
+  if (meioTransporte.value == 0) {
+    // caso nenhum meio de transporte tenha sido selecionado
+    // mudando estilos do componente de saída
     alert.classList.remove("invisivel");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
+
+    // informando o erro
     document.getElementById("paragrafo-alert").innerHTML = "Informe um meio de transporte válido";
   }
-  else if(qtdViagens.value < 0){
+  else if (qtdViagens.value < 0) {
+    // caso a quantidade de viagens seja inválida
+    // mudando estilos do componente de saída
     alert.classList.remove("invisivel");
     alert.classList.remove("alert-success");
     alert.classList.add("alert-danger");
+
+    // informando o erro
     document.getElementById("paragrafo-alert").innerHTML = "Informe uma quantidade válida para as viagens.";
   }
-  else{
+  else {
+    // caso nenhum erro tenha sido encontrado
+    // mudando estilos do componente de saída
     alert.classList.remove("invisivel");
     alert.classList.remove("alert-danger");
     alert.classList.add("alert-success");
-    document.getElementById("paragrafo-alert").innerHTML = "Você pagará R$ "+preco+" de passagem de "+nomeTransporte+
-    " esse mês.";
+
+    // informando o valor gasto com as passagens
+    document.getElementById("paragrafo-alert").innerHTML = "Você pagará R$ " + preco + " de passagem de " + nomeTransporte +
+      " esse mês.";
   }
 });
 
-function calculaPreco(meioTransporte, qtdViagens)
-{
-  if(document.getElementById("checkbox-desconto").checked){
-    return parseFloat((meioTransporte.value * qtdViagens.value)/2.0).toFixed(2);
+/* funcao para calcular o preço das viagens, a partir do custo
+ da passagem no meio de transporte e da quantidade de viagens */
+function calculaPreco(meioTransporte, qtdViagens) {
+  if (document.getElementById("checkbox-desconto").checked) {
+    // se a opção de desconto for selecionada, retorna metade do valor total
+    return parseFloat((meioTransporte.value * qtdViagens.value) / 2.0).toFixed(2);
   }
-  else{
+  else {
+    // sem o desconto, o valor é o preço da passagem vezes a quantidade de viagens
     return parseFloat(meioTransporte.value * qtdViagens.value).toFixed(2);
   }
 }
 
-function verificaTransporte(meioTransporte)
-{
-  if(meioTransporte == 3.75){
+/* funcao para verificar qual o meio de transporte: a partir do preco
+ da passagem, retorna o nome do meio de transporte */
+function verificaTransporte(precoPassagem) {
+  if (precoPassagem == 3.65) {
     return "ônibus";
   }
-  else if(meioTransporte == 4.60){
+  else if (precoPassagem == 4.60) {
     return "ônibus metropolitano";
   }
-  else if(meioTransporte == 5){
+  else if (precoPassagem == 5) {
     return "van";
   }
 }
