@@ -45,8 +45,8 @@ botaoCalcular.addEventListener("click", function (event) {
     alert.classList.add("alert-success");
 
     // informando o valor gasto com as passagens
-    document.getElementById("paragrafo-alert").innerHTML = "Você pagará R$ " + preco + " de passagem de " + nomeTransporte +
-      " esse mês.";
+    let msg = "Você pagará R$ " + preco + " de passagem de " + nomeTransporte + " esse mês.";
+    document.getElementById("paragrafo-alert").innerHTML = msg;
   }
 });
 
